@@ -19,7 +19,7 @@ Before you begin, ensure you have the following prerequisites installed on your 
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/Shop-It.git
+   git clone https://github.com/pacehutt/Shop-It.git
    ```
 
 2. Change your working directory to the project folder:
