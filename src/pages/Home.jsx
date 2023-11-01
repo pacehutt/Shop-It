@@ -6,6 +6,7 @@ import Dropdown from "../components/Dropdown";
 import Toolbar from "../components/Toolbar";
 import Pagination from "../components/Pagination";
 import { useStore } from "../store";
+import Categories from "../components/Categories";
 
 const Container = styled.div`
   width: 100%;
@@ -14,7 +15,7 @@ const Container = styled.div`
 `;
 
 const Home = () => {
-  const { page, setPage } = useStore();
+  const { page, setPage, setLastPage } = useStore();
 
   return (
     <Container>
@@ -29,8 +30,10 @@ const Home = () => {
         }}
         onPrevClick={() => {
           setPage(page - 1);
+          setLastPage(false);
         }}
       ></Pagination>
+      <Categories></Categories>
     </Container>
   );
 };

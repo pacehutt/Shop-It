@@ -5,7 +5,6 @@ import { faShopify } from "@fortawesome/free-brands-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useStore } from "../store";
 
-// Styled components
 const MainContainer = styled.div`
   height: 60px;
   background-color: #d0db7f;
@@ -25,6 +24,8 @@ const SearchContainer = styled.div`
   background-color: #f5f5f5;
   border-radius: 10px;
   padding-right: 5px;
+
+  width: 150px;
 `;
 
 const Input = styled.input`
@@ -62,7 +63,6 @@ const SearchIcon = styled(FontAwesomeIcon)`
   color: #282c34;
 `;
 
-// Component
 const Navbar = () => {
   const { search, setSearch } = useStore();
 

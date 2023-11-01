@@ -13,5 +13,8 @@ export const useStore = create((set) => ({
   page: 1,
   setPage: (page) => set({ page }),
 
-  productsPerPage: 3,
+  productsPerPage: 10,
+
+  lastPage: false,
+  setLastPage: (lastPage) => set({ lastPage }),
 }));

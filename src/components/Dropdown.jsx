@@ -9,8 +9,9 @@ const Select = styled.select`
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 8px;
+  cursor: pointer;
   animation: fade 0.3s ease-in-out;
-  min-width: 150px; /* Set a minimum width */
+  min-width: 90px; /* Set a minimum width */
 
   @keyframes fade {
     from {
@@ -22,12 +23,22 @@ const Select = styled.select`
       transform: translateY(0);
     }
   }
+
+  @media (max-width: 350px) {
+    min-width: 0px;
+    width: 60px;
+  }
 `;
 
 const Option = styled.option`
   background-color: #fff;
   color: #333;
   font-size: 16px;
+  cursor: pointer;
+
+  @media (max-width: 550px) {
+    font-size: 12px;
+  }
 `;
 
 const Dropdown = ({

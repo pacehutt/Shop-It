@@ -15,11 +15,21 @@ const ToolbarRow = styled.div`
   padding: 10px;
   padding-right: 20px;
   color: white;
+  position: relative;
 `;
 
 const Icon = styled.div`
   font-size: 24px;
   cursor: pointer;
+`;
+
+const Title = styled.h2`
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  text-align: left;
+  position: absolute;
+  left: 20px;
 `;
 
 const Toolbar = () => {
@@ -40,6 +50,9 @@ const Toolbar = () => {
 
   return (
     <ToolbarRow>
+      <Title>
+        {category === "All" || category === "" ? "All Products" : category}
+      </Title>
       <Dropdown
         visible={categoryDropdownVisible ? "true" : ""}
         options={["All", "Accessories", "Shoes", "Clothing"]}
@@ -49,7 +62,7 @@ const Toolbar = () => {
       ></Dropdown>
       <Dropdown
         visible={filterDropdownVisible ? "true" : ""}
-        options={["Price Low to High", "Price High to Low"]}
+        options={["$ Low to High", "$ High to Low"]}
         selectedOption={sort}
         setSelect={setSort}
         toggleVisible={toggleFilterDropdown}
@@ -59,12 +72,18 @@ const Toolbar = () => {
         onClick={toggleCategoryDropdown}
         color="#8D9C22"
         size="lg"
+        style={{
+          cursor: "pointer",
+        }}
       />
       <FontAwesomeIcon
         icon={faFilter}
         onClick={toggleFilterDropdown}
         color="#8D9C22"
         size="lg"
+        style={{
+          cursor: "pointer",
+        }}
       />
     </ToolbarRow>
   );
