@@ -63,7 +63,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Feel free to acknowledge anyone or give credit to libraries, resources, or tutorials you used.
 
-Happy shopping and coding!
-```
-
-You can paste this directly into your `README.md` file and replace `"your-username/Shop-It.git"` with the actual repository URL. Customization of the content is also encouraged to provide specific information about your "Shop-It" project.
